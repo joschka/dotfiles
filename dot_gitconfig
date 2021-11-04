@@ -1,0 +1,49 @@
+[alias]
+  ai = add --interactive
+  ap = add --patch
+  br = branch
+  ca = commit --amend
+  can = commit --amend --no-edit
+  cfg = config --global
+  cfge = config --global --edit
+  cfgl = config --global --list
+  ci = commit --verbose
+  cm = commit -m
+  co = checkout
+  cp = cherry-pick
+  d = diff
+  ds = diff --staged
+  lgf = log --patch --follow --
+  rb = rebase
+  rbd = rebase develop
+  s = status --short --branch
+  sta = stash --include-untracked
+  uc = reset --soft HEAD^1
+  uc2 = reset --soft HEAD^2
+  uc3 = reset --soft HEAD^3
+  uc4 = reset --soft HEAD^4
+  uc5 = reset --soft HEAD^5
+  ucm = reset --soft main
+
+[core]
+  pager = diff-so-fancy | less --tabs=4 -RFX
+
+[diff]
+  colorMoved = default
+
+[init]
+  defaultBranch = main
+
+[merge]
+  conflictStyle = diff3
+  tool = vimdiff
+
+[mergetool]
+  keepBackup = false
+
+[push]
+  default = current
+
+[user]
+  email = joschka@users.noreply.github.com
+  name = Joschka

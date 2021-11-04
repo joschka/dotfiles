@@ -1,0 +1,11 @@
+format = """$character"""
+right_format = """$all"""
+
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[jobs]
+disabled = true

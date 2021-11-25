@@ -51,3 +51,7 @@
 [user]
   email = joschka@users.noreply.github.com
   name = Joschka
+
+[includeIf "gitdir:~/Code/github.com/digitalservice4germany/"]
+  path = ~/.gitconfig_professional
+

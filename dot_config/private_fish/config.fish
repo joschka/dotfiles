@@ -1,0 +1,41 @@
+if status is-interactive
+  fish_vi_key_bindings
+
+  set -xg EDITOR nvim
+  set -xg GPG_TTY (tty)
+  set -xg XSECURELOCK_PASSWORD_PROMPT time
+
+  abbr -ag vim nvim
+  abbr -ag show 'wezterm imgcat'
+  abbr -ag rain "mpv --fullscreen --mute=yes --loop-file=inf /home/j/Videos/rain.mp4"
+  set --local la 'exa --long --all --group-directories-first --icons'
+  abbr -ag la $la
+  abbr -ag lat "$la --sort=newest"
+  abbr -ag ... 'cd ..; and cd ..'
+  abbr -ag start "git fetch && git checkout origin/main && git checkout -b"
+  abbr -ag cleanup "git remote prune origin && git branch -vv | grep 'origin/.*: gone]' | awk '{print \$1}' | xargs git branch -D"
+  abbr -ag standby "systemctl suspend"
+  abbr -ag off "poweroff"
+  abbr -ag ni "npm install"
+  abbr -ag yi "yarn install"
+  abbr -ag cal "date && cal -y -w -m"
+  abbr -ag pick "colorpicker --short"
+  abbr -ag desk "xrandr --output DP-2-2 --primary --mode 3840x2160 --auto && xrandr --output eDP-1 --mode 1920x1080 --left-of DP-2-2 --auto"
+  abbr -ag mobile "xrandr --output eDP-1 --primary --mode 1920x1080 --output DP-2-2 --off"
+
+  function load_nvm --on-variable="PWD"
+    if test -e $PWD/.nvmrc -o -e $PWD/.node-version
+      nvm use
+    end
+  end
+
+  load_nvm
+end
+
+if status is-login
+  if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+    exec startx -- -keeptty
+  end
+end
+
+starship init fish | source

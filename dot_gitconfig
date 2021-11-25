@@ -31,6 +31,10 @@
 [diff]
   colorMoved = default
 
+[ghq]
+  vcs = git
+  root = ~/Code
+
 [init]
   defaultBranch = main
 

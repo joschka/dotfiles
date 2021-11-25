@@ -4,18 +4,13 @@
   br = branch
   ca = commit --amend
   can = commit --amend --no-edit
-  cfg = config --global
-  cfge = config --global --edit
-  cfgl = config --global --list
   ci = commit --verbose
   cm = commit -m
   co = checkout
   cp = cherry-pick
-  d = diff
   ds = diff --staged
   lgf = log --patch --follow --
   rb = rebase
-  rbd = rebase develop
   s = status --short --branch
   sta = stash --include-untracked
   uc = reset --soft HEAD^1
@@ -49,9 +44,11 @@
   default = current
 
 [user]
-  email = joschka@users.noreply.github.com
-  name = Joschka
+  name = {{ (onepassword "gitconfig_default_name").details.password }}
+  email = {{ (onepassword "gitconfig_default_email").details.password }}
 
 [includeIf "gitdir:~/Code/github.com/digitalservice4germany/"]
   path = ~/.gitconfig_professional
 
+[includeIf "gitdir:~/Code/github.com/joschka/"]
+  path = ~/.gitconfig_personal

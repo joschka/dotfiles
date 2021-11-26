@@ -17,6 +17,8 @@ if status is-interactive
   abbr -ag standby "systemctl suspend"
   abbr -ag off "poweroff"
   abbr -ag ni "npm install"
+  abbr -ag nb "npm run build"
+  abbr -ag ns "npm start"
   abbr -ag yi "yarn install"
   abbr -ag cal "date && cal -y -w -m"
   abbr -ag pick "colorpicker --short"

@@ -23,6 +23,27 @@ if status is-interactive
   abbr -ag desk "xrandr --output DP-2-2 --primary --mode 3840x2160 --auto && xrandr --output eDP-1 --mode 1920x1080 --left-of DP-2-2 --auto"
   abbr -ag mobile "xrandr --output eDP-1 --primary --mode 1920x1080 --output DP-2-2 --off"
 
+  abbr -ag gai "git add --interactive"
+  abbr -ag gap "git add --patch"
+  abbr -ag gbr "git branch"
+  abbr -ag gca "git commit --amend"
+  abbr -ag gcan "git commit --amend --no-edit"
+  abbr -ag gci "git commit --verbose"
+  abbr -ag gcm "git commit -m"
+  abbr -ag gco "git checkout"
+  abbr -ag gcp "git cherry-pick"
+  abbr -ag gds "git diff --staged"
+  abbr -ag glgf "git log --patch --follow --"
+  abbr -ag grb "git rebase"
+  abbr -ag gs "git status --short --branch"
+  abbr -ag gsta "git stash --include-untracked"
+  abbr -ag guc "git reset --soft HEAD^1"
+  abbr -ag guc2 "git reset --soft HEAD^2"
+  abbr -ag guc3 "git reset --soft HEAD^3"
+  abbr -ag guc4 "git reset --soft HEAD^4"
+  abbr -ag guc5 "git reset --soft HEAD^5"
+  abbr -ag gucm "git reset --soft main"
+
   function load_nvm --on-variable="PWD"
     if test -e $PWD/.nvmrc -o -e $PWD/.node-version
       nvm use

@@ -23,6 +23,7 @@ if status is-interactive
   abbr -ag desk "xrandr --output DP-2-2 --primary --mode 3840x2160 --auto && xrandr --output eDP-1 --mode 1920x1080 --left-of DP-2-2 --auto"
   abbr -ag mobile "xrandr --output eDP-1 --primary --mode 1920x1080 --output DP-2-2 --off"
 
+  abbr -ag gg "lazygit"
   abbr -ag gai "git add --interactive"
   abbr -ag gap "git add --patch"
   abbr -ag gbr "git branch"

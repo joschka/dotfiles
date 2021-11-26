@@ -44,8 +44,8 @@
   default = current
 
 [user]
-  name = {{ (onepassword "gitconfig_default_name").details.password }}
-  email = {{ (onepassword "gitconfig_default_email").details.password }}
+  name = {{ (onepasswordItemFields "dotfiles").gitconfig_default_name.v }}
+  email = {{ (onepasswordItemFields "dotfiles").gitconfig_default_email.v }}
 
 [includeIf "gitdir:~/Code/github.com/digitalservice4germany/"]
   path = ~/.gitconfig_professional

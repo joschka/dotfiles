@@ -8,10 +8,10 @@ local nodeRepl = {label = 'Node.js REPL', args = {'node'}}
 local rubyRepl = {label = 'Ruby REPL', args = {'irb'}}
 local pythonRepl = {label = 'Python REPL', args = {'ipython'}}
 local luaRepl = {label = 'Lua REPL', args = {'lua'}}
-local weztermConfig = {label = 'Edit wezterm config', cwd = wezterm.home_dir .. '/.config/wezterm', args = {'nvim', './wezterm.lua'}}
-local fishConfig = {label = 'Edit fish config', cwd = '/home/j/.config/fish', args = {'nvim', './fish.config'}}
-local obsidian = {label = 'Edit Obsidian files', cwd = '/home/j/Vault/Default', args = {'nvim', '.'}}
-local todos = {label = 'Edit todo list', cwd = '/home/j', args = {'nvim', 'todo.txt'}}
+local weztermConfig = {label = 'Edit wezterm config', cwd = wezterm.home_dir .. '/.config/wezterm', args = {'nvim', 'wezterm.lua'}}
+local fishConfig = {label = 'Edit fish config', cwd = wezterm.home_dir .. '/.config/fish', args = {'nvim', 'config.fish'}}
+local obsidian = {label = 'Edit Obsidian files', cwd = wezterm.home_dir .. '/Vault/Default', args = {'nvim', '.'}}
+local todos = {label = 'Edit todo list', cwd = wezterm.home_dir, args = {'nvim', 'todo.txt'}}
 
 return {
   launch_menu = {

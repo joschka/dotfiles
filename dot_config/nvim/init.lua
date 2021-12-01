@@ -71,6 +71,7 @@ require("packer").startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter-textobjects",
 	})
+
 	use({
 		"nvim-treesitter/playground",
 	})
@@ -183,7 +184,7 @@ nullLs.config({
 	},
 })
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
 	local function buf_set_keymap(...)
 		vim.api.nvim_buf_set_keymap(bufnr, ...)
 	end
@@ -296,14 +297,11 @@ require("nvim-treesitter.configs").setup({
 	textobjects = {
 		enable = true,
 		swap = {
-			enable = true,
 			swap_next = {
 				["<leader>a"] = "@parameter.inner",
-				["<leader>b"] = "(field)",
 			},
 			swap_previous = {
 				["<leader>A"] = "@parameter.inner",
-				["<leader>B"] = "(field)",
 			},
 		},
 	},

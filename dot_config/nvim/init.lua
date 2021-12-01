@@ -100,6 +100,10 @@ require("packer").startup(function(use)
 		end,
 	})
 
+	use({
+		"github/copilot.vim",
+	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
@@ -288,10 +292,10 @@ require("nvim-treesitter.configs").setup({
 	incremental_selection = {
 		enable = true,
 		keymaps = {
-			init_selection = "gnn",
-			node_incremental = "grn",
-			scope_incremental = "grc",
-			node_decremental = "grm",
+			init_selection = "<cr>",
+			node_incremental = "<cr>",
+			scope_incremental = "<tab>",
+			node_decremental = "<s-tab>",
 		},
 	},
 	textobjects = {
